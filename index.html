@@ -11,12 +11,6 @@
 
 
 
-
-
-
-
-
-
 <body class="d-flex justify-content-center bodyTaille">
     <div class="container text-center m-lg-5">
 
@@ -29,7 +23,7 @@
             </div>
             <div class="row align-items-start">
                 <div class="col ecran mx-2">
-                    <p class="text-end text-light stp">555555</p>
+                    <p class="text-end text-light stp" id="ecran">.</p>
                 </div>
             </div>
             <div class="row align-items-start">
@@ -44,70 +38,88 @@
         <div class="row align-items-start bgCalcul py-lg-5 py-4 justify-content-center rounded-bottom-5">
             <div class="row align-items-start mb-4">
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2 px-5"
+                    <button onclick="efface()" class="btn bgbutton border border-dark text-light rounded-2 px-5"
                         type="submit">Effacer</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">Effacer
+                    <button onclick='effaceTOUT()' class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">Effacer
                         tout</button>
                 </div>
             </div>
             <div class="row align-items-start mb-5">
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">7</button>
+                    <button onclick="numero(7)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">7</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">8</button>
+                    <button onclick="numero(8)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">8</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">9</button>
+                    <button onclick="numero(9)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">9</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">/</button>
+                    <button onclick="operateur('/')" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">/</button>
                 </div>
             </div>
             <div class="row align-items-start mb-5">
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">4</button>
+                    <button onclick="numero(4)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">4</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">5</button>
+                    <button onclick="numero(5)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">5</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">6</button>
+                    <button onclick="numero(6)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">6</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">*</button>
+                    <button onclick="operateur('x')" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">*</button>
                 </div>
             </div>
             <div class="row align-items-start mb-lg-5 mb-4">
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">1</button>
+                    <button onclick="numero(1)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">1</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">2</button>
+                    <button onclick="numero(2)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">2</button>
                 </div>
                 <div class="col">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">3</button>
+                    <button onclick="numero(3)" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">3</button>
                 </div>
                 <div class="col">
-                    <button class="btn plus border border-dark text-light rounded-2" type="submit">+</button>
+                    <button onclick="operateur('+')" class="btn plus border border-dark text-light rounded-2"
+                        type="submit">+</button>
                 </div>
             </div>
             <div class="row align-items-start mb-lg-5 mb-3">
                 <div class="col-6">
-                    <button class="btn bgbutton border border-dark text-light rounded-2 zero" type="submit">0</button>
+                    <button onclick="numero(0)" class="btn bgbutton border border-dark text-light rounded-2 zero"
+                        type="submit">0</button>
                 </div>
                 <div class="col-3">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">=</button>
+                    <button onclick="egal()" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">=</button>
                 </div>
                 <div class="col-3">
-                    <button class="btn bgbutton border border-dark text-light rounded-2" type="submit">-</button>
+                    <button onclick="operateur('-')" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">-</button>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 
