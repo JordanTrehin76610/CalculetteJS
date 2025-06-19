@@ -98,8 +98,13 @@ function effaceTOUT() {
 //Transforme une chaine en tableau puis efface le dernier élément et le remet en chaîne
 function efface() {
     text = document.getElementById("ecran").textContent
-    effaceChiffre = text.split('')
-    effaceChiffre.pop()
-    text = effaceChiffre.join('')
-    document.getElementById("ecran").textContent = text
+
+    if (text != '.' && text.length > 1) {
+        effaceChiffre = text.split('')
+        effaceChiffre.pop()
+        text = effaceChiffre.join('')
+        document.getElementById("ecran").textContent = text
+    } else if (text.length == 1) {
+        document.getElementById("ecran").textContent = '.'
+    }
 }
