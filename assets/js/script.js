@@ -7,9 +7,11 @@ let number2 = 0
 let symbole = ''
 let sauvSymbole = ''
 let resultat = 0
-let effacer = ['.', '+', '-', 'x', '/', 'Erreur']
+let effacer = ['_', '+', '-', 'x', '/', 'Erreur']
 let effaceChiffre = []
-
+let verif = []
+let fauteNegatif = 0
+let fauteVirgule = 0
 
 
 //Ecrit des nombres sur des symboles pour les effacer sinon continue la chaîne
@@ -17,14 +19,22 @@ let effaceChiffre = []
 function numero(chiffre) {
     texte = document.getElementById("ecran").textContent
 
-    if (effacer.includes(texte) || texte == resultat) {
+    //Ici on définie des paramètres de "fautes"
+    let nbNegatif = (texte.match(/negatif:/g) || []).length //On vérifie le nombre d'occurence de négatif
+    let negatifAuDebut = texte.startsWith("negatif:") //On vérifie que négatif sois bien au début
+    let nbVirgule = (texte.match(/\./g) || []).length
+    let virguleAlaFin = texte.endsWith(".")
+
+    if ((nbNegatif > 1 || (nbNegatif === 1 && !negatifAuDebut)) || nbVirgule > 1 || (nbVirgule > 1 && !virguleAlaFin)) { //Punition si les paramètres de fautes sont positifs 
+        document.getElementById("ecran").textContent = "Erreur";
+    }
+    else if (effacer.includes(texte) || texte == resultat) {
         document.getElementById("ecran").textContent = chiffre
     } else {
         document.getElementById("ecran").textContent += chiffre
     }
 
     texte = document.getElementById("ecran").textContent
-
 }
 
 
@@ -33,10 +43,17 @@ function numero(chiffre) {
 function operateur(symbole) {
     texte = document.getElementById("ecran").textContent
 
-    if (effacer.includes(texte)) {
-        document.getElementById("ecran").textContent = "Erreur"
-    } else {
+    //Ici on définie des paramètres de "fautes"
+    let nbNegatif = (texte.match(/negatif:/g) || []).length //On vérifie le nombre d'occurence de négatif
+    let negatifAuDebut = texte.startsWith("negatif:") //On vérifie que négatif sois bien au début
+    let nbVirgule = (texte.match(/\./g) || []).length
+    let virguleAlaFin = texte.endsWith(".")
 
+    if ((nbNegatif > 1 || (nbNegatif === 1 && !negatifAuDebut)) || nbVirgule > 1 || (nbVirgule > 1 && !virguleAlaFin) || effacer.includes(texte)) { //Punition si les paramètres de fautes sont positifs 
+        document.getElementById("ecran").textContent = "Erreur";
+    }
+    else {
+        texte = texte.replace(/negatif:/, "-");
         number1 = +texte
         if (symbole == '+' || symbole == '-' || symbole == 'x' || symbole == '/') {
             document.getElementById("ecran").textContent = symbole
@@ -57,9 +74,17 @@ function egal() {
 
     texte = document.getElementById("ecran").textContent
 
-    if (effacer.includes(texte)) {
-        document.getElementById("ecran").textContent = "Erreur"
-    } else {
+    //Ici on définie des paramètres de "fautes"
+    let nbNegatif = (texte.match(/negatif:/g) || []).length //On vérifie le nombre d'occurence de négatif
+    let negatifAuDebut = texte.startsWith("negatif:") //On vérifie que négatif sois bien au début
+    let nbVirgule = (texte.match(/\./g) || []).length
+    let virguleAlaFin = texte.endsWith(".")
+
+    if ((nbNegatif > 1 || (nbNegatif === 1 && !negatifAuDebut)) || nbVirgule > 1 || (nbVirgule > 1 && !virguleAlaFin) || effacer.includes(texte)) { //Punition si les paramètres de fautes sont positifs 
+        document.getElementById("ecran").textContent = "Erreur";
+    }
+    else {
+        texte = texte.replace(/negatif:/, "-");
         number2 = +texte
         switch (sauvSymbole) {
             case "+":
@@ -89,7 +114,7 @@ function egal() {
 
 //Efface tout
 function effaceTOUT() {
-    document.getElementById("ecran").textContent = "."
+    document.getElementById("ecran").textContent = "_"
 }
 
 
@@ -105,6 +130,6 @@ function efface() {
         text = effaceChiffre.join('')
         document.getElementById("ecran").textContent = text
     } else if (text.length == 1) {
-        document.getElementById("ecran").textContent = '.'
+        document.getElementById("ecran").textContent = '_'
     }
 }

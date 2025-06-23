@@ -30,9 +30,10 @@
   margin-right: 35%;
 }
 
-.zero {
-  padding-left: 5rem;
-  padding-right: 5rem;
+.virgule {
+  font-size: 1.5rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
 }
 
 .plus {
@@ -42,8 +43,37 @@
   padding-right: 1.3rem;
 }
 
+.egal {
+  font-size: 1.5rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+.AC {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.negatif {
+  font-size: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .stp {
-  padding-top: 1.8rem;
+  padding-top: 1rem;
+}
+
+.stpHistorique {
+  padding-top: 0.5rem;
+  background-color: rgb(36, 46, 36);
+  font-size: 1rem;
+  font-family: "Workbench", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
 }
 
 .bgbutton:hover {

@@ -23,7 +23,8 @@
             </div>
             <div class="row align-items-start">
                 <div class="col ecran mx-2">
-                    <p class="text-end text-light stp" id="ecran">.</p>
+                    <p class="text-end text-secondary stpHistorique" id="historique">historique</p>
+                    <p class="text-end text-light stp" id="ecran">_</p>
                 </div>
             </div>
             <div class="row align-items-start">
@@ -37,14 +38,18 @@
         <!-- PARTIE DU BAS -->
         <div class="row align-items-start bgCalcul py-lg-5 py-4 justify-content-center rounded-bottom-5">
             <div class="row align-items-start mb-4">
-                <div class="col">
-                    <button onclick="efface()" class="btn bgbutton border border-dark text-light rounded-2 px-5"
-                        type="submit">Effacer</button>
+                <div class="col-3">
+                    <button onclick="efface()" class="btn bgbutton border border-dark text-light rounded-2"
+                        type="submit">C</button>
                 </div>
-                <div class="col">
-                    <button onclick='effaceTOUT()' class="btn bgbutton border border-dark text-light rounded-2"
-                        type="submit">Effacer
-                        tout</button>
+                <div class="col-3">
+                    <button onclick='effaceTOUT()' class="btn bgbutton border border-dark text-light rounded-2 AC"
+                        type="submit">AC</button>
+                </div>
+                <div class="col-6">
+                    <button onclick="numero('negatif:')"
+                        class="btn bgbutton border border-dark text-light rounded-2 negatif"
+                        type="submit">Négatif</button>
                 </div>
             </div>
             <div class="row align-items-start mb-5">
@@ -102,15 +107,19 @@
                 </div>
             </div>
             <div class="row align-items-start mb-lg-5 mb-3">
-                <div class="col-6">
+                <div class="col">
                     <button onclick="numero(0)" class="btn bgbutton border border-dark text-light rounded-2 zero"
                         type="submit">0</button>
                 </div>
-                <div class="col-3">
-                    <button onclick="egal()" class="btn bgbutton border border-dark text-light rounded-2"
+                <div class="col">
+                    <button onclick="numero('.')" class="btn bgbutton border border-dark text-light rounded-2 virgule"
+                        type="submit">,</button>
+                </div>
+                <div class="col">
+                    <button onclick="egal()" class="btn bgbutton border border-dark text-light rounded-2 egal"
                         type="submit">=</button>
                 </div>
-                <div class="col-3">
+                <div class="col">
                     <button onclick="operateur('-')" class="btn bgbutton border border-dark text-light rounded-2"
                         type="submit">-</button>
                 </div>
