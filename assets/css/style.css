@@ -65,17 +65,6 @@
   padding-top: 1rem;
 }
 
-.stpHistorique {
-  padding-top: 0.5rem;
-  background-color: rgb(36, 46, 36);
-  font-size: 1rem;
-  font-family: "Workbench", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "BLED" 0, "SCAN" 0;
-}
-
 .bgbutton:hover {
   background-color: rgb(116, 12, 12);
 }
@@ -98,8 +87,27 @@
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
-  .zero {
-    padding-left: 4.1rem;
-    padding-right: 4.1rem;
+  .virgule {
+    font-size: 1rem;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+  }
+  .plus {
+    background-color: rgb(187, 19, 19);
+    font-size: 1.45rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+  .egal {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+  .AC {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .negatif {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
