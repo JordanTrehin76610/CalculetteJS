@@ -11,13 +11,13 @@
 .ecran {
     background-color: rgb(36, 46, 36);
     font-size: 2rem;
-      font-family: "Workbench", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "BLED" 0,
-    "SCAN" 0;
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
 }
 
 .bgbutton {
@@ -64,22 +64,22 @@
 
 @media only screen and (max-width: 450px) {
     .bodyTaille {
-    width: 100vw;
-    margin-left: 0%;
-    margin-right: 0%;
-}
+        width: 100vw;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 
-.bgbutton {
-    background-color: rgb(187, 19, 19);
-    font-size: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-}
+    .bgbutton {
+        background-color: rgb(187, 19, 19);
+        font-size: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
 
-.zero {
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
+    .zero {
+        padding-left: 4.1rem;
+        padding-right: 4.1rem;
+    }
 }
