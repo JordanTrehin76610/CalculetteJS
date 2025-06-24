@@ -23,7 +23,7 @@ function numero(chiffre) {
     let virguleAlaFin = texte.endsWith(".")
 
     if ((nbNegatif > 1 || (nbNegatif === 1 && !negatifAuDebut)) || nbVirgule > 1 || (nbVirgule > 1 && !virguleAlaFin)) { //Punition si les paramètres de fautes sont positifs 
-        document.getElementById("ecran").textContent = "Erreur";
+        document.getElementById("ecran").textContent = "Erreur"
     }
     else if (effacer.includes(texte) || texte == resultat) {
         document.getElementById("ecran").textContent = chiffre
@@ -50,7 +50,7 @@ function operateur(symbole) {
         document.getElementById("ecran").textContent = "Erreur";
     }
     else {
-        texte = texte.replace(/negatif:/, "-");
+        texte = texte.replace(/negatif:/, "-")
         number1 = +texte
         if (symbole == '+' || symbole == '-' || symbole == 'x' || symbole == '/') {
             document.getElementById("ecran").textContent = symbole
@@ -78,10 +78,10 @@ function egal() {
     let virguleAlaFin = texte.endsWith(".")
 
     if ((nbNegatif > 1 || (nbNegatif === 1 && !negatifAuDebut)) || nbVirgule > 1 || (nbVirgule > 1 && !virguleAlaFin) || effacer.includes(texte)) { //Punition si les paramètres de fautes sont positifs 
-        document.getElementById("ecran").textContent = "Erreur";
+        document.getElementById("ecran").textContent = "Erreur"
     }
     else {
-        texte = texte.replace(/negatif:/, "-");
+        texte = texte.replace(/negatif:/, "-")
         number2 = +texte
         switch (sauvSymbole) {
             case "+":
