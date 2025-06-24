@@ -9,8 +9,6 @@ let sauvSymbole = ''
 let resultat = 0
 let effacer = ['_', '+', '-', 'x', '/', 'Erreur']
 let effaceChiffre = []
-let fauteNegatif = 0
-let fauteVirgule = 0
 
 
 //Ecrit des nombres sur des symboles pour les effacer sinon continue la chaîne
