@@ -73,7 +73,7 @@
   background-color: rgb(116, 12, 12);
 }
 
-@media only screen and (max-width: 450px) and (min-width: 330px) {
+@media only screen and (max-width: 450px) and (min-width: 376px) {
   .bodyTaille {
     width: 100vw;
     margin-left: 0%;
@@ -111,7 +111,7 @@
     padding-right: 3rem;
   }
 }
-@media only screen and (max-width: 321px) {
+@media only screen and (max-width: 375px) {
   .bodyTaille {
     width: 100vw;
     margin-left: 0%;
