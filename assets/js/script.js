@@ -9,7 +9,6 @@ let sauvSymbole = ''
 let resultat = 0
 let effacer = ['_', '+', '-', 'x', '/', 'Erreur']
 let effaceChiffre = []
-let verif = []
 let fauteNegatif = 0
 let fauteVirgule = 0
 
